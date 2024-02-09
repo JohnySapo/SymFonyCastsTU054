@@ -1,5 +1,5 @@
 ## SymFonyCast PHP Beginner - Course Certification 01
-## PHP: LEVEL 1 - Branch: Course-Cert-1
+## PHP: LEVEL 1 - Branch: Main
 ## PHP: LEVEL 2 - Branch: Course-Cert-2
 ## PHP: LEVEL 3 - Branch: Course-Cert-3
 =======================
