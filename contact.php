@@ -3,5 +3,5 @@
 ?>
 
 <?php require 'layout/header.php'; ?>
-<h1>Helping you find your new best friend from over <?php echo count(get_pets()); ?> pets</h1>
+<h1>Helping you find your new best friend from over <?php echo count(get_pets(0)); ?> pets</h1>
 <?php require 'layout/footer.php'; ?>

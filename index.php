@@ -1,7 +1,6 @@
 <?php
 require 'lib/functions.php';
-
-$pets = get_pets();
+$pets = get_pets(0);
 
 $pets = array_reverse($pets);
 
@@ -27,7 +26,12 @@ $pupCount = count($pets);
     <div class="row">
         <?php foreach ($pets as $cutePet) { ?>
             <div class="col-md-4 pet-list-item">
-                <h2><?php echo $cutePet['name']; ?></h2>
+
+                <h2>
+                    <a href="/show.php?id=<?php echo $cutePet['id']?>">
+                    <?php echo $cutePet['name']; ?>
+                    </a>
+                </h2>
 
                 <img src="/images/<?php echo $cutePet['image']; ?>" class="img-rounded">
 
@@ -50,24 +54,7 @@ $pupCount = count($pets);
                 <p><?php echo $cutePet['bio']; ?></p>
             </div>
         <?php } ?>
-
-        <?php
-        foreach ($pets as $cutePet) {
-            echo '<div class="col-lg-4">';
-            echo '<h2>';
-            echo $cutePet['name'];
-            echo '</h2>';
-            echo '<p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-                            euismod. Donec sed odio dui. 
-                    </p>';
-            echo '<p><a class="btn btn-default" href="#">View details &raquo;</a></p>';
-            echo '</div>';
-        }
-        ?>
     </div>
-
     <hr>
     <?php 
         require 'layout/footer.php';
